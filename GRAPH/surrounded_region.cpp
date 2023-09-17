@@ -12,14 +12,12 @@ void dfs(int row, int col, vector<vector<int>> &vis,
             int nrow = row + delrow[i];
             int ncol = col + delcol[i]; 
             // check for valid coordinates and unvisited Os
-            if(nrow >=0 && nrow <n && ncol >= 0 && ncol < m 
-            && !vis[nrow][ncol] && mat[nrow][ncol] == 'O') {
+            if(nrow >=0 && nrow <n && ncol >= 0 && ncol < m  && !vis[nrow][ncol] && mat[nrow][ncol] == 'O') {
                 dfs(nrow, ncol, vis, mat, delrow, delcol); 
             }
         }
     }
-    vector<vector<char>> fill(int n, int m, 
-    vector<vector<char>> mat)
+    vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
     {
         int delrow[] = {-1, 0, +1, 0};
         int delcol[] = {0, 1, 0, -1}; 
@@ -44,13 +42,11 @@ void dfs(int row, int col, vector<vector<int>> &vis,
             if(!vis[i][0] && mat[i][0] == 'O') {
                 dfs(i, 0, vis, mat, delrow, delcol); 
             }
-            
             // last column
             if(!vis[i][m-1] && mat[i][m-1] == 'O') {
                 dfs(i, m-1, vis, mat, delrow, delcol); 
             }
         }
-        
         // if unvisited O then convert to X
         for(int i = 0;i<n;i++) {
             for(int j= 0 ;j<m;j++) {
