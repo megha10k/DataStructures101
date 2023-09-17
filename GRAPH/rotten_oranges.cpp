@@ -1,3 +1,6 @@
+
+//same level is been visited only in same time so bfs is used
+
 int orangesRotting(vector<vector<int>>& grid) {
         if(grid.empty()) return 0;
         int m = grid.size(), n = grid[0].size(), days = 0, tot = 0, cnt = 0;
