@@ -1,4 +1,7 @@
 //BFS
+//TC- O(N+2E) for every node we are traversing through all its adjacent node
+//SC- O(N)
+
 bool detect(int src, vector<int> adj[], int vis[]) {
       vis[src] = 1; 
       // store <source node, parent node>
@@ -29,6 +32,8 @@ bool detect(int src, vector<int> adj[], int vis[]) {
   }
 
 //DFS
+//TC- O(N+2E)- all the adjacent node and the summation of adjacent node is 2E
+//SC- 0(N)-visited array+O(N)- auxillary space
 bool dfs_detect(int node, int parent, int vis[], vector<int> adj[]) {
         vis[node] = 1; 
         // visit adjacent nodes
