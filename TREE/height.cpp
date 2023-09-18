@@ -1,3 +1,6 @@
+TC--O(N)
+SC--O(height)
+
 int height(struct Node* node){
         //base case
         if(node == NULL) {
