@@ -1,3 +1,5 @@
+//TC--- all operation O(N)
+
 class Queue {
     
     int* arr;
