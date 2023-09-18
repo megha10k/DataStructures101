@@ -1,4 +1,4 @@
-
+//NOT an optimal approach
 #include <bits/stdc++.h>
 using namespace std;
 
